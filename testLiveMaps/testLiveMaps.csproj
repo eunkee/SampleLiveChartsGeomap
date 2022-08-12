@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E750C62C-50BE-4E05-91B2-6C2692D9D49D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>testLiveMaps</RootNamespace>
+    <AssemblyName>testLiveMaps</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="maps\Afghanistan.xml" />
+    <Content Include="maps\Akrotiri Sovereign Base Area.xml" />
+    <Content Include="maps\Aland.xml" />
+    <Content Include="maps\Albania.xml" />
+    <Content Include="maps\Algeria.xml" />
+    <Content Include="maps\American Samoa.xml" />
+    <Content Include="maps\Andorra.xml" />
+    <Content Include="maps\Angola.xml" />
+    <Content Include="maps\Anguilla.xml" />
+    <Content Include="maps\Antarctica.xml" />
+    <Content Include="maps\Antigua and Barbuda.xml" />
+    <Content Include="maps\Argentina.xml" />
+    <Content Include="maps\Armenia.xml" />
+    <Content Include="maps\Aruba.xml" />
+    <Content Include="maps\Ashmore and Cartier Islands.xml" />
+    <Content Include="maps\Australia.xml" />
+    <Content Include="maps\Austria.xml" />
+    <Content Include="maps\Azerbaijan.xml" />
+    <Content Include="maps\Bahrain.xml" />
+    <Content Include="maps\Bajo Nuevo Bank %28Petrel Is.%29.xml" />
+    <Content Include="maps\Bangladesh.xml" />
+    <Content Include="maps\Barbados.xml" />
+    <Content Include="maps\Baykonur Cosmodrome.xml" />
+    <Content Include="maps\Belarus.xml" />
+    <Content Include="maps\Belgium.xml" />
+    <Content Include="maps\Belize.xml" />
+    <Content Include="maps\Benin.xml" />
+    <Content Include="maps\Bermuda.xml" />
+    <Content Include="maps\Bhutan.xml" />
+    <Content Include="maps\Bolivia.xml" />
+    <Content Include="maps\Bosnia and Herzegovina.xml" />
+    <Content Include="maps\Botswana.xml" />
+    <Content Include="maps\Brazil.xml" />
+    <Content Include="maps\British Indian Ocean Territory.xml" />
+    <Content Include="maps\British Virgin Islands.xml" />
+    <Content Include="maps\Brunei.xml" />
+    <Content Include="maps\Bulgaria.xml" />
+    <Content Include="maps\Burkina Faso.xml" />
+    <Content Include="maps\Burundi.xml" />
+    <Content Include="maps\Cambodia.xml" />
+    <Content Include="maps\Cameroon.xml" />
+    <Content Include="maps\Canada.xml" />
+    <Content Include="maps\Cape Verde.xml" />
+    <Content Include="maps\Caribbean Netherlands.xml" />
+    <Content Include="maps\Cayman Islands.xml" />
+    <Content Include="maps\Central African Republic.xml" />
+    <Content Include="maps\Chad.xml" />
+    <Content Include="maps\Chile.xml" />
+    <Content Include="maps\China.xml" />
+    <Content Include="maps\Clipperton Island.xml" />
+    <Content Include="maps\Colombia.xml" />
+    <Content Include="maps\Comoros.xml" />
+    <Content Include="maps\Cook Islands.xml" />
+    <Content Include="maps\Coral Sea Islands.xml" />
+    <Content Include="maps\Costa Rica.xml" />
+    <Content Include="maps\Croatia.xml" />
+    <Content Include="maps\Cuba.xml" />
+    <Content Include="maps\Curaçao.xml" />
+    <Content Include="maps\Cyprus.xml" />
+    <Content Include="maps\Czech Republic.xml" />
+    <Content Include="maps\Democratic Republic of the Congo.xml" />
+    <Content Include="maps\Denmark.xml" />
+    <Content Include="maps\Dhekelia Soverign Base Area.xml" />
+    <Content Include="maps\Djibouti.xml" />
+    <Content Include="maps\Dominica.xml" />
+    <Content Include="maps\Dominican Republic.xml" />
+    <Content Include="maps\East Timor.xml" />
+    <Content Include="maps\Ecuador.xml" />
+    <Content Include="maps\Egypt.xml" />
+    <Content Include="maps\El Salvador.xml" />
+    <Content Include="maps\Equatorial Guinea.xml" />
+    <Content Include="maps\Eritrea.xml" />
+    <Content Include="maps\Estonia.xml" />
+    <Content Include="maps\Ethiopia.xml" />
+    <Content Include="maps\Falkland Islands.xml" />
+    <Content Include="maps\Faroe Islands.xml" />
+    <Content Include="maps\Federated States of Micronesia.xml" />
+    <Content Include="maps\Fiji.xml" />
+    <Content Include="maps\Finland.xml" />
+    <Content Include="maps\France.xml" />
+    <Content Include="maps\French Polynesia.xml" />
+    <Content Include="maps\French Southern and Antarctic Lands.xml" />
+    <Content Include="maps\Gabon.xml" />
+    <Content Include="maps\Gambia.xml" />
+    <Content Include="maps\Gaza Strip.xml" />
+    <Content Include="maps\Georgia.xml" />
+    <Content Include="maps\Germany.xml" />
+    <Content Include="maps\Ghana.xml" />
+    <Content Include="maps\Gibraltar.xml" />
+    <Content Include="maps\Greece.xml" />
+    <Content Include="maps\Greenland.xml" />
+    <Content Include="maps\Grenada.xml" />
+    <Content Include="maps\Guam.xml" />
+    <Content Include="maps\Guatemala.xml" />
+    <Content Include="maps\Guernsey.xml" />
+    <Content Include="maps\Guinea Bissau.xml" />
+    <Content Include="maps\Guinea.xml" />
+    <Content Include="maps\Guyana.xml" />
+    <Content Include="maps\Haiti.xml" />
+    <Content Include="maps\Heard Island and McDonald Islands.xml" />
+    <Content Include="maps\Honduras.xml" />
+    <Content Include="maps\Hong Kong S.A.R..xml" />
+    <Content Include="maps\Hungary.xml" />
+    <Content Include="maps\Iceland.xml" />
+    <Content Include="maps\India.xml" />
+    <Content Include="maps\Indian Ocean Territories.xml" />
+    <Content Include="maps\Indonesia.xml" />
+    <Content Include="maps\Iran.xml" />
+    <Content Include="maps\Iraq.xml" />
+    <Content Include="maps\Ireland.xml" />
+    <Content Include="maps\Isle of Man.xml" />
+    <Content Include="maps\Israel.xml" />
+    <Content Include="maps\Italy.xml" />
+    <Content Include="maps\Ivory Coast.xml" />
+    <Content Include="maps\Jamaica.xml" />
+    <Content Include="maps\Japan.xml" />
+    <Content Include="maps\Jersey.xml" />
+    <Content Include="maps\Jordan.xml" />
+    <Content Include="maps\Kazakhstan.xml" />
+    <Content Include="maps\Kenya.xml" />
+    <Content Include="maps\Kiribati.xml" />
+    <Content Include="maps\Kosovo.xml" />
+    <Content Include="maps\Kuwait.xml" />
+    <Content Include="maps\Kyrgyzstan.xml" />
+    <Content Include="maps\Laos.xml" />
+    <Content Include="maps\Latvia.xml" />
+    <Content Include="maps\Lebanon.xml" />
+    <Content Include="maps\Lesotho.xml" />
+    <Content Include="maps\Liberia.xml" />
+    <Content Include="maps\Libya.xml" />
+    <Content Include="maps\Liechtenstein.xml" />
+    <Content Include="maps\Lithuania.xml" />
+    <Content Include="maps\Luxembourg.xml" />
+    <Content Include="maps\Macau S.A.R.xml" />
+    <Content Include="maps\Macedonia.xml" />
+    <Content Include="maps\Madagascar.xml" />
+    <Content Include="maps\Malawi.xml" />
+    <Content Include="maps\Malaysia.xml" />
+    <Content Include="maps\Maldives.xml" />
+    <Content Include="maps\Mali.xml" />
+    <Content Include="maps\Malta.xml" />
+    <Content Include="maps\Marshall Islands.xml" />
+    <Content Include="maps\Mauritania.xml" />
+    <Content Include="maps\Mauritius.xml" />
+    <Content Include="maps\Mexico.xml" />
+    <Content Include="maps\Moldova.xml" />
+    <Content Include="maps\Monaco.xml" />
+    <Content Include="maps\Mongolia.xml" />
+    <Content Include="maps\Montenegro.xml" />
+    <Content Include="maps\Montserrat.xml" />
+    <Content Include="maps\Morocco.xml" />
+    <Content Include="maps\Mozambique.xml" />
+    <Content Include="maps\Myanmar.xml" />
+    <Content Include="maps\Namibia.xml" />
+    <Content Include="maps\Nauru.xml" />
+    <Content Include="maps\Nepal.xml" />
+    <Content Include="maps\Netherlands.xml" />
+    <Content Include="maps\New Caledonia.xml" />
+    <Content Include="maps\New Zealand.xml" />
+    <Content Include="maps\Nicaragua.xml" />
+    <Content Include="maps\Niger.xml" />
+    <Content Include="maps\Nigeria.xml" />
+    <Content Include="maps\Niue.xml" />
+    <Content Include="maps\Norfolk Island.xml" />
+    <Content Include="maps\North Korea.xml" />
+    <Content Include="maps\Northern Cyprus.xml" />
+    <Content Include="maps\Northern Mariana Islands.xml" />
+    <Content Include="maps\Norway.xml" />
+    <Content Include="maps\Null Island.xml" />
+    <Content Include="maps\Oman.xml" />
+    <Content Include="maps\Pakistan.xml" />
+    <Content Include="maps\Palau.xml" />
+    <Content Include="maps\Panama.xml" />
+    <Content Include="maps\Papua New Guinea.xml" />
+    <Content Include="maps\Paraguay.xml" />
+    <Content Include="maps\Peru.xml" />
+    <Content Include="maps\Philippines.xml" />
+    <Content Include="maps\Pitcairn Islands.xml" />
+    <Content Include="maps\Poland.xml" />
+    <Content Include="maps\Portugal.xml" />
+    <Content Include="maps\Puerto Rico.xml" />
+    <Content Include="maps\Qatar.xml" />
+    <Content Include="maps\Republic of Serbia.xml" />
+    <Content Include="maps\Republic of the Congo.xml" />
+    <Content Include="maps\Romania.xml" />
+    <Content Include="maps\Russia.xml" />
+    <Content Include="maps\Rwanda.xml" />
+    <Content Include="maps\S. Sudan.xml" />
+    <Content Include="maps\Saint Barthelemy.xml" />
+    <Content Include="maps\Saint Helena.xml" />
+    <Content Include="maps\Saint Kitts and Nevis.xml" />
+    <Content Include="maps\Saint Lucia.xml" />
+    <Content Include="maps\Saint Martin.xml" />
+    <Content Include="maps\Saint Pierre and Miquelon.xml" />
+    <Content Include="maps\Saint Vincent and the Grenadines.xml" />
+    <Content Include="maps\Samoa.xml" />
+    <Content Include="maps\San Marino.xml" />
+    <Content Include="maps\Sao Tome and Principe.xml" />
+    <Content Include="maps\Saudi Arabia.xml" />
+    <Content Include="maps\Scarborough Reef.xml" />
+    <Content Include="maps\Senegal.xml" />
+    <Content Include="maps\Serranilla Bank.xml" />
+    <Content Include="maps\Seychelles.xml" />
+    <Content Include="maps\Siachen Glacier.xml" />
+    <Content Include="maps\Sierra Leone.xml" />
+    <Content Include="maps\Singapore.xml" />
+    <Content Include="maps\Sint Maarten.xml" />
+    <Content Include="maps\Slovakia.xml" />
+    <Content Include="maps\Slovenia.xml" />
+    <Content Include="maps\Solomon Islands.xml" />
+    <Content Include="maps\Somalia.xml" />
+    <Content Include="maps\Somaliland.xml" />
+    <Content Include="maps\South Africa.xml" />
+    <Content Include="maps\South Georgia and the Islands.xml" />
+    <Content Include="maps\South Korea.xml" />
+    <Content Include="maps\Spain.xml" />
+    <Content Include="maps\Spratly Is..xml" />
+    <Content Include="maps\Sri Lanka.xml" />
+    <Content Include="maps\Sudan.xml" />
+    <Content Include="maps\Suriname.xml" />
+    <Content Include="maps\Swaziland.xml" />
+    <Content Include="maps\Sweden.xml" />
+    <Content Include="maps\Switzerland.xml" />
+    <Content Include="maps\Syria.xml" />
+    <Content Include="maps\Taiwan.xml" />
+    <Content Include="maps\Tajikistan.xml" />
+    <Content Include="maps\test.txt" />
+    <Content Include="maps\Thailand.xml" />
+    <Content Include="maps\The Bahamas.xml" />
+    <Content Include="maps\Togo.xml" />
+    <Content Include="maps\Tonga.xml" />
+    <Content Include="maps\Trinidad and Tobago.xml" />
+    <Content Include="maps\Tunisia.xml" />
+    <Content Include="maps\Turkey.xml" />
+    <Content Include="maps\Turkmenistan.xml" />
+    <Content Include="maps\Turks and Caicos Islands.xml" />
+    <Content Include="maps\Tuvalu.xml" />
+    <Content Include="maps\Uganda.xml" />
+    <Content Include="maps\Ukraine.xml" />
+    <Content Include="maps\United Arab Emirates.xml" />
+    <Content Include="maps\United Kingdom.xml" />
+    <Content Include="maps\United Republic of Tanzania.xml" />
+    <Content Include="maps\United States Minor Outlying Islands.xml" />
+    <Content Include="maps\United States of America.xml" />
+    <Content Include="maps\United States Virgin Islands.xml" />
+    <Content Include="maps\Uruguay.xml" />
+    <Content Include="maps\US Naval Base Guantanamo Bay.xml" />
+    <Content Include="maps\Uzbekistan.xml" />
+    <Content Include="maps\Vanuatu.xml" />
+    <Content Include="maps\Vatican.xml" />
+    <Content Include="maps\Venezuela.xml" />
+    <Content Include="maps\Vietnam.xml" />
+    <Content Include="maps\Wallis and Futuna.xml" />
+    <Content Include="maps\West Bank.xml" />
+    <Content Include="maps\Western Sahara.xml" />
+    <Content Include="maps\World.xml" />
+    <Content Include="maps\Yemen.xml" />
+    <Content Include="maps\Zambia.xml" />
+    <Content Include="maps\Zimbabwe.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
